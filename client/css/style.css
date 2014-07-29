@@ -27,6 +27,10 @@ html, body {
 #col1, #col2, #col3, #col4 {
   position: absolute;
   height: 100%;
+  color: #fff;
+
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #col1 {
@@ -34,6 +38,7 @@ html, body {
   left: 0;
   width: 100px;
   background-color: #000;
+  overflow: hidden;
 }
 
 #col2 {
@@ -54,4 +59,5 @@ html, body {
   top: 0;
   left: 700px;
   background-color: #999;
+  color: #000;
 }
