@@ -1,0 +1,5 @@
+The preload directory in the lib/schemas folder is
+used to preload the audits script before the
+AccountSchema.  Meteor.js loads from the deepest
+directory first.  There will be a ReferenceError if
+AuditSchema is not loaded first.
