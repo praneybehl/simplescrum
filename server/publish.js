@@ -63,7 +63,7 @@ Meteor.publish('accounts', function(_query, _options) {
     }
 
     // return our cursor object
-    return Accounts.find(query, options);
+    return _Accounts.find(query, options);
   }
 });
 

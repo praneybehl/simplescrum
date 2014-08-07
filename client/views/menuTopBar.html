@@ -1,6 +1,5 @@
 <template name="menuTopBar">
   <nav id="menuTopBar" class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
         <span class="sr-only">{{__ 'toggle_nav'}}</span>
@@ -13,11 +12,11 @@
       </a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-left">
         {{> loginButtons}}
       </ul>
+      {{#if currentUser}}
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
@@ -26,6 +25,7 @@
           <i class="fa fa-search"></i> {{__ 'button.search'}}
         </button>
       </form>
-    </div><!-- /.navbar-collapse -->
+      {{/if}}
+    </div>
   </nav>
 </template>

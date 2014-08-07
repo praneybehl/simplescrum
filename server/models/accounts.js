@@ -1,4 +1,4 @@
-Accounts.allow({
+_Accounts.allow({
   insert: function(userId, doc) {
     return true;
   },
@@ -10,7 +10,7 @@ Accounts.allow({
   }
 });
 
-Accounts.deny({
+_Accounts.deny({
   insert: function(userId, doc) {
     return false;
   },

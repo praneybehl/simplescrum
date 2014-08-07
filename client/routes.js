@@ -3,6 +3,10 @@ Router.configure({
   layoutTemplate: '_layout', // our default layout template
   loadingTemplate: '_loading', // our loading template
   notFoundTemplate: '404', // page not found
+  loginRequired: {
+    name: 'login',
+    shouldRoute: true
+  },
   waitOn: function() {
     // this is where i like to load default subscriptions like
     // to a settings collection.
@@ -28,7 +32,17 @@ Router.map(function() {
   // home, default route
   this.route('home', {
     path: '/',
+    loginRequired: {
+      name: 'login',
+      shouldRoute: true
+    },
     controller: 'HomeController'
+  });
+
+  // login
+  this.route('login', {
+    path: '/login',
+    controller: 'LoginController'
   });
 
   // settings
