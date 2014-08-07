@@ -1,0 +1,19 @@
+<template name="menuLeft">
+  <ul class="list-group text-center mar-t-10 menu-left">
+    <li class="list-group-item {{isActiveRoute 'home'}} home">
+      <a href="{{pathFor 'home'}}"><i class="fa fa-home fa-4x"></i></a>
+    </li>
+    <li class="list-group-item {{isActivePath 'users'}}">
+      <a href="{{pathFor 'users'}}"><i class="fa fa-users fa-4x"></i></a>
+    </li>
+    <li class="list-group-item {{isActivePath 'projects'}}">
+      <a href="{{pathFor 'projects'}}"><i class="fa fa-code fa-4x"></i></a>
+    </li>
+    <li class="list-group-item {{isActivePath 'stories'}}">
+      <a href="{{pathFor 'stories'}}"><i class="fa fa-check fa-4x"></i></a>
+    </li>
+    <li class="list-group-item {{isActivePath 'settings'}}">
+      <a href="{{pathFor 'settings'}}"><i class="fa fa-gears fa-4x"></i></a>
+    </li>
+  </ul>
+</template>

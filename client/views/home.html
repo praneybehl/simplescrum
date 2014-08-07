@@ -1,0 +1,81 @@
+<template name="home">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{__ 'home.title'}}</h3>
+    </div>
+    <div class="panel-body">
+      <p>{{__ 'home.message'}}</p>
+
+      <!-- block panels -->
+      <div class="row">
+        <div class="col-sm-6 col-lg-3">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-4">
+                  <a href="{{pathFor 'users'}}">
+                    <i class="fa fa-users fa-3x"></i>
+                  </a>
+                </div>
+                <div class="col-sm-8">
+                  {{__ 'home.user'}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-4">
+                  <a href="{{pathFor 'projects'}}">
+                    <i class="fa fa-code fa-3x"></i>
+                  </a>
+                </div>
+                <div class="col-sm-8">
+                  {{__ 'home.project'}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-4">
+                  <a href="{{pathFor 'stories'}}">
+                    <i class="fa fa-check fa-3x"></i>
+                  </a>
+                </div>
+                <div class="col-sm-8">
+                  {{__ 'home.story'}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-4">
+                  <a href="{{pathFor 'settings'}}">
+                    <i class="fa fa-gears fa-3x"></i>
+                  </a>
+                </div>
+                <div class="col-sm-8">
+                  {{__ 'home.setting'}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
