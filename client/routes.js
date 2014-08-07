@@ -1,6 +1,7 @@
 
 Router.configure({
   layoutTemplate: '_layout', // our default layout template
+  loadingTemplate: '_loading', // our loading template
   notFoundTemplate: '404', // page not found
   waitOn: function() {
     // this is where i like to load default subscriptions like
@@ -8,12 +9,14 @@ Router.configure({
   },
   onBeforeAction: function() {
     // this can be used for loading screens, etc...
-
-    // this will handle the resizing and alignment of our screen.
-    $(window).trigger('resize');
   },
   onAfterAction: function() {
     // this can be used for loading screens, etc...
+
+    // this will handle the resizing and alignment of our screen.
+    Meteor.setTimeout(function() {
+      $(window).trigger('resize');
+    }, 500);
   }
 });
 
@@ -26,5 +29,35 @@ Router.map(function() {
   this.route('home', {
     path: '/',
     controller: 'HomeController'
+  });
+
+  // settings
+  this.route('settings', {
+    path: '/settings',
+    controller: 'TestController'
+  });
+
+  // users
+  this.route('users', {
+    path: '/users',
+    controller: 'TestController'
+  });
+
+  // projects
+  this.route('projects', {
+    path: '/projects',
+    controller: 'TestController'
+  });
+
+  // milestones
+  this.route('milestones', {
+    path: '/milestones',
+    controller: 'TestController'
+  });
+
+  // stories
+  this.route('stories', {
+    path: '/stories',
+    controller: 'TestController'
   });
 });

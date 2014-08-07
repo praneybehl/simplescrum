@@ -1,51 +1,9 @@
 <template name="_layout">
   {{> menuTopBar}}
   <div id="wrapper">
-    <div id="col1">Menu</div>
-    <div id="col2">Sub Menu</div>
-    <div id="col3">Sub Sub Menu</div>
-    <div id="col4">
-      Main Body<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-      <br />
-      How many columns can be shown by setting the session 'layout' variable to 1-4.<br />
-    </div>
+    <div id="col1">{{> menuLeft}}</div>
+    <div id="col2">{{> yield region='col2'}}</div>
+    <div id="col3">{{> yield region='col3'}}</div>
+    <div id="col4">{{> yield}}</div>
   </div>
 </template>

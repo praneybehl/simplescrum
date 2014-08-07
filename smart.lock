@@ -17,7 +17,8 @@
       "jquery-ui": {},
       "roles": {},
       "toastr": {},
-      "x-editable-bootstrap3": {}
+      "x-editable-bootstrap3": {},
+      "accounts-ui-bootstrap-3": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -42,8 +43,8 @@
       },
       "bootstrap3-datetimepicker": {
         "git": "https://github.com/tsega/meteor-bootstrap3-datetimepicker.git",
-        "tag": "v0.2.0",
-        "commit": "b4b36680fd8c1ac2a5412e72f62b60634709ea6b"
+        "tag": "v0.3.0",
+        "commit": "a0b5e8aaa117555672bb5a479b3842bb97e3f3b5"
       },
       "collection-hooks": {
         "git": "https://github.com/matb33/meteor-collection-hooks.git",
@@ -99,6 +100,11 @@
         "git": "https://github.com/JustinSGray/meteor-x-editable-bootstrap.git",
         "tag": "v1.5.2",
         "commit": "1e5e6d7bddf0b17cc6ea2fc1f50c3f9fd2cfc3f3"
+      },
+      "accounts-ui-bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
+        "tag": "v0.3.3",
+        "commit": "2e50b605d8d5ed68e48c4529a65f13552d8af3f9"
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",

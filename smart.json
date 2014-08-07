@@ -15,6 +15,7 @@
     "jquery-ui": {},
     "roles": {},
     "toastr": {},
-    "x-editable-bootstrap3": {}
+    "x-editable-bootstrap3": {},
+    "accounts-ui-bootstrap-3": {}
   }
 }

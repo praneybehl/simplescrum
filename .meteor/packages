@@ -20,4 +20,8 @@ iron-router-active
 roles
 toastr
 x-editable-bootstrap3
-insecure
+accounts-password
+accounts-google
+accounts-facebook
+accounts-github
+accounts-ui-bootstrap-3
