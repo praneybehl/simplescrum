@@ -5,7 +5,7 @@ Template.teamNew.helpers({
     });
   },
   roles: function() {
-    return _.map(Roles.getAllRoles().fetch(), function(role) {
+    return _.map(Meteor.roles.find().fetch(), function(role) {
       return {label: role, value: role};
     });
   }
