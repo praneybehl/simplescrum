@@ -1,4 +1,4 @@
-Template.teamNew.rendered = function() {
+Template.teamView.rendered = function() {
   // setup multiselect options
   var _options = {
     maxHeight: 300, // no more than 400px in height, scrollbar
@@ -19,7 +19,7 @@ Template.teamNew.rendered = function() {
   }, 500);
 };
 
-Template.teamNew.helpers({
+Template.teamView.helpers({
   users: function() {
     return _.map(Meteor.users.find().fetch(), function(user) {
       return {label: getName(user._id), value: user._id};

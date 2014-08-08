@@ -11,7 +11,12 @@ Router.configure({
     // this is where i like to load default subscriptions like
     // to a settings collection.
     return [
-      Meteor.subscribe('allUsers')
+      Meteor.subscribe('allUsers'),
+      Meteor.subscribe('teams'),
+      Meteor.subscribe('projects'),
+      Meteor.subscribe('sprints'),
+      Meteor.subscribe('stories'),
+      Meteor.subscribe('settings')
     ];
   },
   onBeforeAction: function() {

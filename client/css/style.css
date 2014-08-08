@@ -51,8 +51,8 @@ html, body {
   border-bottom: 1px solid #428bca;
   border-left: 1px solid #428bca;
 
-  /*border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;*/
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 #col1 .active i { color: #000; }
 #col1 .home { border: 0; left: -1px; }

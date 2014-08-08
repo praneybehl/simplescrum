@@ -28,10 +28,10 @@
         </div>
         {{#each teams}}
         <div class="list-group-item {{isActive _id}}">
-          <i class="fa fa-user"></i> <a href="{{pathFor 'teamsView' _id=_id}}">{{title}}</a><br />
+          <a href="{{pathFor 'teamsView' _id=_id}}">{{title}}</a><br />
           <small>
-            <i class="fa fa-group"></i>
-            {{getRoles _id}}
+            <i class="fa fa-group"></i> {{__ 'team.roles'}}: {{getCount roles}}<br />
+            <i class="fa fa-user"></i> {{__ 'team.users'}}: {{getCount users}}<br />
           </small>
         </div>
         {{/each}}
