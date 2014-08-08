@@ -3,10 +3,10 @@
     <li class="list-group-item {{isActiveRoute 'home'}} home">
       <a href="{{pathFor 'home'}}"><i class="fa fa-home fa-4x"></i></a>
     </li>
-    <li class="list-group-item {{isActivePath 'users'}}">
+    <li class="list-group-item {{isActivePath 'users'}}{{isActivePath 'teams'}}">
       <a href="{{pathFor 'users'}}"><i class="fa fa-users fa-4x"></i></a>
     </li>
-    <li class="list-group-item {{isActivePath 'projects'}}">
+    <li class="list-group-item {{isActivePath 'projects'}}{{isActivePath 'sprints'}}">
       <a href="{{pathFor 'projects'}}"><i class="fa fa-code fa-4x"></i></a>
     </li>
     <li class="list-group-item {{isActivePath 'stories'}}">
