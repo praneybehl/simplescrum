@@ -1,9 +1,4 @@
 <template name="userList">
-  <div class="list-group">
-    <div class="list-group-item {{isActiveRoute 'usersNew'}}">
-      <i class="fa fa-plus"></i> <a href="{{pathFor 'usersNew'}}">{{__ 'button.create'}} {{__ 'button.user'}}</a>
-    </div>
-  </div>
   <!-- Tabs -->
   <ul class="nav nav-tabs" role="tablist">
     <li class="active"><a href="#users" role="tab" data-toggle="tab">{{__ 'button.user'}}</a></li>
@@ -13,6 +8,9 @@
   <div class="tab-content">
     <div class="tab-pane active" id="users">
       <div class="list-group">
+        <div class="list-group-item {{isActiveRoute 'usersNew'}}">
+          <i class="fa fa-plus"></i> <a href="{{pathFor 'usersNew'}}">{{__ 'button.create'}} {{__ 'button.user'}}</a>
+        </div>
         {{#each users}}
         <div class="list-group-item {{isActive _id}}">
           <i class="fa fa-user"></i> <a href="{{pathFor 'usersView' _id=_id}}">{{getName _id}}</a><br />
@@ -25,6 +23,9 @@
     </div>
     <div class="tab-pane" id="teams">
       <div class="list-group">
+        <div class="list-group-item {{isActiveRoute 'teamsNew'}}">
+          <i class="fa fa-plus"></i> <a href="{{pathFor 'teamsNew'}}">{{__ 'button.create'}} {{__ 'button.team'}}</a>
+        </div>
         {{#each teams}}
         <div class="list-group-item {{isActive _id}}">
           <i class="fa fa-user"></i> <a href="{{pathFor 'teamsView' _id=_id}}">{{title}}</a><br />

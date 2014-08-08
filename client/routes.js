@@ -80,6 +80,17 @@ Router.map(function() {
     template: 'userView',
     controller: 'UserController'
   });
+  // teams
+  this.route('teamsNew', {
+    path: '/teams/new',
+    template: 'teamNew',
+    controller: 'UserController'
+  });
+  this.route('teamsView', {
+    path: '/teams/view/:_id',
+    template: 'teamView',
+    controller: 'UserController'
+  });
 
   // projects
   this.route('projects', {

@@ -1,0 +1,25 @@
+<template name="teamView">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{title}}</h3>
+    </div>
+    <div class="panel-body">
+      {{#autoForm collection="Teams" id="teamForm" type="update" doc=team}}
+      <div class="row">
+        <div class="col-sm-12">
+          {{> afQuickField name="title"}}
+        </div>
+      </div>
+      <!-- Buttons -->
+      <div class="">
+        <button type="submit" class="btn btn-primary">
+          <i class="fa fa-save"></i> {{__ 'button.update'}} {{__ 'button.team'}}
+        </button>
+        <button type="reset" class="btn btn-warning">
+          <i class="fa fa-refresh"></i> {{__ 'button.reset'}}
+        </button>
+      </div>
+      {{/autoForm}}
+    </div>
+  </div>
+</template>

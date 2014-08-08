@@ -1,0 +1,33 @@
+<template name="teamNew">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{__ 'button.create'}} {{__ 'button.team'}}</h3>
+    </div>
+    <div class="panel-body">
+      {{#autoForm collection="Teams" id="teamNew" type="insert"}}
+      <div class="row">
+        <div class="col-sm-12">
+          {{> afQuickField name="title"}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          {{> afQuickField name="users" options=users}}
+        </div>
+        <div class="col-sm-6">
+          {{> afQuickField name="roles" options=roles}}
+        </div>
+      </div>
+      <!-- Buttons -->
+      <div class="">
+        <button type="submit" class="btn btn-primary">
+          <i class="fa fa-save"></i> {{__ 'button.create'}} {{__ 'button.team'}}
+        </button>
+        <button type="reset" class="btn btn-warning">
+          <i class="fa fa-refresh"></i> {{__ 'button.reset'}}
+        </button>
+      </div>
+      {{/autoForm}}
+    </div>
+  </div>
+</template>
