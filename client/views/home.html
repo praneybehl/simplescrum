@@ -76,6 +76,128 @@
           </div>
         </div>
       </div>
+
+      <!-- Summary Blocks -->
+      <p class="mar-t-10">{{__ 'home.summary'}}</p>
+      <div class="row summary-blocks">
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <table class="table table-hover table-condensed">
+                <thead>
+                  <tr>
+                    <th>{{__ 'user.profile.userName'}}</th>
+                    <th>{{__ 'date_created'}}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each recentUsers}}
+                  <tr>
+                    <td><a href="{{pathFor 'usersView' _id=_id}}">{{getName _id}}</a></td>
+                    <td>{{fromNow date_created}}</td>
+                  </tr>
+                  {{else}}
+                  <tr>
+                    <td colspan="2" class="text-center">
+                      <span class="label label-warning">{{__ 'error.empty'}}</span>
+                    </td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <table class="table table-hover table-condensed">
+                <thead>
+                  <tr>
+                    <th>{{__ 'project.title'}}</th>
+                    <th>{{__ 'date_created'}}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each recentProjects}}
+                  <tr>
+                    <td>{{title}}</td>
+                    <td>{{fromNow date_created}}</td>
+                  </tr>
+                  {{else}}
+                  <tr>
+                    <td colspan="2" class="text-center">
+                      <span class="label label-warning">{{__ 'error.empty'}}</span>
+                    </td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <table class="table table-hover table-condensed">
+                <thead>
+                  <tr>
+                    <th>{{__ 'sprint.title'}}</th>
+                    <th>{{__ 'date_created'}}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each recentSprints}}
+                  <tr>
+                    <td>{{title}}</td>
+                    <td>{{fromNow date_created}}</td>
+                  </tr>
+                  {{else}}
+                  <tr>
+                    <td colspan="2" class="text-center">
+                      <span class="label label-warning">{{__ 'error.empty'}}</span>
+                    </td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <table class="table table-hover table-condensed">
+                <thead>
+                  <tr>
+                    <th>{{__ 'story.title'}}</th>
+                    <th>{{__ 'date_created'}}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each recentStories}}
+                  <tr>
+                    <td>{{title}}</td>
+                    <td>{{fromNow date_created}}</td>
+                  </tr>
+                  {{else}}
+                  <tr>
+                    <td colspan="2" class="text-center">
+                      <span class="label label-warning">{{__ 'error.empty'}}</span>
+                    </td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </template>

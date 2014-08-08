@@ -118,3 +118,9 @@ html, body {
 
 /* Blocks */
 .blocks div { height: 90px; }
+.summary-blocks .panel-body {
+  max-height: 320px;
+  height: 350px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
