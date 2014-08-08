@@ -46,6 +46,17 @@ AutoForm.hooks({
       }];
 
       return doc;
+    },
+    /**
+     * This will load the item after it has been added.
+     * @global
+     * @param  {string} operation insert, update, remove or method name
+     * @param  {object|string|boolean} result    Returned from submit.
+     * @param  {object} template  The template object.
+     * @return {void}           Nothing
+     */
+    onSuccess: function(operation, result, template) {
+      Router.go('usersView', {_id: result});
     }
   }
 });
