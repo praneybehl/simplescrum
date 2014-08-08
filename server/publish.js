@@ -39,15 +39,12 @@ Meteor.publish('allUsers', function(_query, _options) {
 });
 
 /**
- * This function will take a query and options value and
- * return a mongodb cursor object.
- * @param  {object} _query   The query object.
- * @param  {object} _options The query options.
+ * This function will publish our roles to the clients.
  * @return {object}          The mongodb cursor object.
  */
-Meteor.publish('allRoles', function() {
+Meteor.publish(null, function() {
   if (this.userId) {
-    return Roles.getAllRoles();
+    return Meteor.roles.find({});
   }
 });
 
