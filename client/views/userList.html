@@ -1,7 +1,7 @@
 <template name="userList">
   <div class="list-group">
     <div class="list-group-item {{isActiveRoute 'usersNew'}}">
-      <i class="fa fa-plus"></i> <a href="{{pathFor 'usersNew'}}">{{__ 'button.create'}}</a>
+      <i class="fa fa-plus"></i> <a href="{{pathFor 'usersNew'}}">{{__ 'button.create'}} {{__ 'button.user'}}</a>
     </div>
     {{#each items}}
     <div class="list-group-item {{isActive _id}}">
