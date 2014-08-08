@@ -72,7 +72,7 @@ Router.map(function() {
   });
   this.route('usersNew', {
     path: '/users/new',
-    template: '404',
+    template: 'userNew',
     controller: 'UserController'
   });
   this.route('usersView', {

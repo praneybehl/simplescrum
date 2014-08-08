@@ -1,0 +1,100 @@
+<template name="userNew">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{__ 'button.create'}}</h3>
+    </div>
+    <div class="panel-body">
+      {{#autoForm collection="Meteor.users" id="userNew" type="insert"}}
+      <!-- Name -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{__ 'user.profile.names'}}</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-12 col-lg-4">
+              {{> afQuickField name="profile.fname"}}
+            </div>
+            <div class="col-sm-12 col-lg-4">
+              {{> afQuickField name="profile.mname"}}
+            </div>
+            <div class="col-sm-12 col-lg-4">
+              {{> afQuickField name="profile.lname"}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Email & Phone -->
+      <div class="row">
+        <div class="col-sm-12 col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{__ 'user.emails.address'}}</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-12">
+                  {{> afQuickField name="emails.$.address"}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{__ 'user.profile.phone'}}</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-12">
+                  {{> afQuickField name="profile.phone"}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Address -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{__ 'user.profile.address.name'}}</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-12 col-lg-4">
+              {{> afQuickField name="profile.address.street1"}}
+            </div>
+            <div class="col-sm-12 col-lg-4">
+              {{> afQuickField name="profile.address.street2"}}
+            </div>
+            <div class="col-sm-12 col-lg-4">
+              {{> afQuickField name="profile.address.street3"}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-lg-7">
+              {{> afQuickField name="profile.address.city"}}
+            </div>
+            <div class="col-sm-12 col-lg-3">
+              {{> afQuickField name="profile.address.state" options=states}}
+            </div>
+            <div class="col-sm-12 col-lg-2">
+              {{> afQuickField name="profile.address.zip"}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Buttons -->
+      <div class="">
+        <button type="submit" class="btn btn-primary">
+          <i class="fa fa-save"></i> {{__ 'button.create'}}
+        </button>
+        <button type="reset" class="btn btn-warning">
+          <i class="fa fa-refresh"></i> {{__ 'button.reset'}}
+        </button>
+      </div>
+      {{/autoForm}}
+    </div>
+  </div>
+</template>

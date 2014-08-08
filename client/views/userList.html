@@ -7,8 +7,7 @@
     <div class="list-group-item {{isActive _id}}">
       <i class="fa fa-user"></i> <a href="{{pathFor 'usersView' _id=_id}}">{{getName _id}}</a><br />
       <small>
-        <i class="fa fa-envelope"></i>
-        <a href="mailto:{{getEmail _id}}">{{getEmail _id}}</a>
+        <i class="fa fa-envelope"></i> {{getEmail _id}}
       </small>
     </div>
     {{/each}}
