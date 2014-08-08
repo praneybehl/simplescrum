@@ -70,6 +70,11 @@ Router.map(function() {
     template: '_blank',
     controller: 'UserController'
   });
+  this.route('usersNew', {
+    path: '/users/new',
+    template: '404',
+    controller: 'UserController'
+  });
   this.route('usersView', {
     path: '/users/view/:_id',
     template: 'userView',
