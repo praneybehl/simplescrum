@@ -70,7 +70,6 @@ Alert = {
    * @return {void}       Nothing.
    */
   _do: function(type, error, title, code) {
-    console.log(error);
     title = title || 'Error';
     code = code || '0';
 
