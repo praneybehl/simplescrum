@@ -67,7 +67,12 @@ html, body {
 #col2 .list-group-item { border: 0; }
 #col2 .list-group-item:hover { color: #000; background-color: #f0f0f0; }
 #col2 .list-group-item:hover a { color: #000; }
-#col2 .tab-content { border-left: 1px solid #ddd; }
+#col2 .tab-content {
+  border-top: 0;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
 
 #col3 {
   top: 0;
