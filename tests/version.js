@@ -3,11 +3,11 @@ var assert = require('assert');
 suite('Version', function() {
   test('return version number', function(done, server) {
     server.eval(function() {
-      emit('version', getVersion());
+      emit('item', getVersion());
     });
 
-    server.once('version', function(version) {
-      assert.ok(version);
+    server.once('item', function(item) {
+      assert.ok(item);
       done();
     });
   });
