@@ -10,6 +10,9 @@ Router.configure({
   waitOn: function() {
     // this is where i like to load default subscriptions like
     // to a settings collection.
+    return [
+      Meteor.subscribe('allUsers')
+    ];
   },
   onBeforeAction: function() {
     // this can be used for loading screens, etc...
