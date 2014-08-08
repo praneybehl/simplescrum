@@ -78,12 +78,19 @@ html, body {
   left: 700px;
   background-color: #e0e0e0;
 }
-#col4 .panel:first-child { margin: 10px; }
+/*#col4 .panel:first-child { margin: 10px; }*/
 
 /*** Components ***/
 
 /* menuLeft */
 .menu-left {}
+
+/* navbar at top */
+#login-dropdown-list a {
+  font-weight: bold;
+  font-size: 16px;
+  font-style: italic;
+}
 
 /*** Classes ***/
 
@@ -91,4 +98,8 @@ html, body {
 .panel-heading { border-radius: 0; }
 
 /* Margins */
+.mar-10 { margin: 10px; }
 .mar-t-10 { margin-top: 10px; }
+
+/* Blocks */
+.blocks div { height: 90px; }

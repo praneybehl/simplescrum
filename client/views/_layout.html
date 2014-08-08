@@ -4,6 +4,10 @@
     <div id="col1">{{> menuLeft}}</div>
     <div id="col2">{{> yield region='col2'}}</div>
     <div id="col3">{{> yield region='col3'}}</div>
-    <div id="col4">{{> yield}}</div>
+    <div id="col4">
+      <div class="mar-10">
+        {{> yield}}
+      </div>
+    </div>
   </div>
 </template>

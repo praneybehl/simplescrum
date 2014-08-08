@@ -45,6 +45,12 @@ Router.map(function() {
     controller: 'LoginController'
   });
 
+  // profile
+  this.route('profile', {
+    path: '/profile',
+    controller: 'ProfileController'
+  });
+
   // settings
   this.route('settings', {
     path: '/settings',
