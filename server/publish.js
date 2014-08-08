@@ -45,6 +45,19 @@ Meteor.publish('allUsers', function(_query, _options) {
  * @param  {object} _options The query options.
  * @return {object}          The mongodb cursor object.
  */
+Meteor.publish('allRoles', function() {
+  if (this.userId) {
+    return Roles.getAllRoles();
+  }
+});
+
+/**
+ * This function will take a query and options value and
+ * return a mongodb cursor object.
+ * @param  {object} _query   The query object.
+ * @param  {object} _options The query options.
+ * @return {object}          The mongodb cursor object.
+ */
 Meteor.publish('accounts', function(_query, _options) {
   if (this.userId) {
     // get our user account id
