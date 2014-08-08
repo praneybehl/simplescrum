@@ -19,7 +19,7 @@
 Meteor.publish('allUsers', function(_query, _options) {
   if (this.userId) {
     // get our user account id
-    var _account = getUserAccountId(this.userId);
+    var _account = getUserAccountID(this.userId);
 
     // combine defaults with new
     _query = _.extend({_account: _account}, _query);
@@ -34,7 +34,7 @@ Meteor.publish('allUsers', function(_query, _options) {
     }
 
     // return our cursor object
-    return Meteor.users.find(query, options);
+    return Meteor.users.find(_query, _options);
   }
 });
 
@@ -48,7 +48,7 @@ Meteor.publish('allUsers', function(_query, _options) {
 Meteor.publish('accounts', function(_query, _options) {
   if (this.userId) {
     // get our user account id
-    var _account = getUserAccountId(this.userId);
+    var _account = getUserAccountID(this.userId);
 
     // combine defaults with new
     _query = _.extend({_id: _account}, _query);
@@ -63,7 +63,7 @@ Meteor.publish('accounts', function(_query, _options) {
     }
 
     // return our cursor object
-    return _Accounts.find(query, options);
+    return _Accounts.find(_query, _options);
   }
 });
 
@@ -77,7 +77,7 @@ Meteor.publish('accounts', function(_query, _options) {
 Meteor.publish('projects', function(_query, _options) {
   if (this.userId) {
     // get our user account id
-    var _account = getUserAccountId(this.userId);
+    var _account = getUserAccountID(this.userId);
 
     // combine defaults with new
     _query = _.extend({_account: _account}, _query);
@@ -92,7 +92,7 @@ Meteor.publish('projects', function(_query, _options) {
     }
 
     // return our cursor object
-    return Projects.find(query, options);
+    return Projects.find(_query, _options);
   }
 });
 
@@ -106,7 +106,7 @@ Meteor.publish('projects', function(_query, _options) {
 Meteor.publish('sprints', function(_query, _options) {
   if (this.userId) {
     // get our user account id
-    var _account = getUserAccountId(this.userId);
+    var _account = getUserAccountID(this.userId);
 
     // combine defaults with new
     _query = _.extend({_account: _account}, _query);
@@ -121,7 +121,7 @@ Meteor.publish('sprints', function(_query, _options) {
     }
 
     // return our cursor object
-    return Sprints.find(query, options);
+    return Sprints.find(_query, _options);
   }
 });
 
@@ -135,7 +135,7 @@ Meteor.publish('sprints', function(_query, _options) {
 Meteor.publish('stories', function(_query, _options) {
   if (this.userId) {
     // get our user account id
-    var _account = getUserAccountId(this.userId);
+    var _account = getUserAccountID(this.userId);
 
     // combine defaults with new
     _query = _.extend({_account: _account}, _query);
@@ -150,7 +150,7 @@ Meteor.publish('stories', function(_query, _options) {
     }
 
     // return our cursor object
-    return Stories.find(query, options);
+    return Stories.find(_query, _options);
   }
 });
 
@@ -164,7 +164,7 @@ Meteor.publish('stories', function(_query, _options) {
 Meteor.publish('teams', function(_query, _options) {
   if (this.userId) {
     // get our user account id
-    var _account = getUserAccountId(this.userId);
+    var _account = getUserAccountID(this.userId);
 
     // combine defaults with new
     _query = _.extend({_account: _account}, _query);
@@ -179,6 +179,6 @@ Meteor.publish('teams', function(_query, _options) {
     }
 
     // return our cursor object
-    return Teams.find(query, options);
+    return Teams.find(_query, _options);
   }
 });

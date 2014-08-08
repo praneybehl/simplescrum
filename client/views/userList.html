@@ -1,0 +1,9 @@
+<template name="userList">
+  <div class="list-group">
+    {{#each items}}
+    <div class="list-group-item {{isActive _id}}">
+      <a href="{{pathFor 'usersView' _id=_id}}">{{getName _id}}</a>
+    </div>
+    {{/each}}
+  </div>
+</template>

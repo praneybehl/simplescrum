@@ -1,5 +1,4 @@
 LoginController = RouteController.extend({
-  template: 'login',
   redirectOnLogin: true,
   onBeforeAction: function() {
     Session.set('layout', 1);

@@ -1,5 +1,4 @@
 TestController = RouteController.extend({
-  template: 'testMain',
   yieldTemplates: {
     'testSub': {to: 'col2'},
     'testSubSub': {to: 'col3'}

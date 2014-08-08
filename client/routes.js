@@ -35,6 +35,7 @@ Router.map(function() {
   // home, default route
   this.route('home', {
     path: '/',
+    template: 'home',
     loginRequired: {
       name: 'login',
       shouldRoute: true
@@ -45,42 +46,54 @@ Router.map(function() {
   // login
   this.route('login', {
     path: '/login',
+    template: 'login',
     controller: 'LoginController'
   });
 
   // profile
   this.route('profile', {
     path: '/profile',
+    template: 'profile',
     controller: 'ProfileController'
   });
 
   // settings
   this.route('settings', {
     path: '/settings',
+    template: 'testMain',
     controller: 'TestController'
   });
 
   // users
   this.route('users', {
     path: '/users',
-    controller: 'TestController'
+    template: '_blank',
+    controller: 'UserController'
+  });
+  this.route('usersView', {
+    path: '/users/view/:_id',
+    template: 'userView',
+    controller: 'UserController'
   });
 
   // projects
   this.route('projects', {
     path: '/projects',
+    template: 'testMain',
     controller: 'TestController'
   });
 
   // milestones
   this.route('milestones', {
     path: '/milestones',
+    template: 'testMain',
     controller: 'TestController'
   });
 
   // stories
   this.route('stories', {
     path: '/stories',
+    template: 'testMain',
     controller: 'TestController'
   });
 });

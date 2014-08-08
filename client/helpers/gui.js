@@ -38,6 +38,10 @@ resizeLayout = function() {
       _col4.width(w).css({left: Math.abs(_wrapper.width() - w)});
       break;
   }
+
+  // resize blank if shown
+  if ($('#blank').length > 0)
+    $('#blank').height(_wrapper.height() - 20);
 };
 
 /**
