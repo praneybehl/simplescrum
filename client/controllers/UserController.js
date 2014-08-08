@@ -22,8 +22,10 @@ UserController = RouteController.extend({
     };
   },
   onAfterAction: function() {
-    // setup multiselect
-    $('select[name=roles]').multiselect('rebuild');
-    $('select[name=users]').multiselect('rebuild');
+    Meteor.setTimeout(function() {
+      // setup multiselect
+      $('select[name=roles]').multiselect('rebuild');
+      $('select[name=users]').multiselect('rebuild');
+    }, 500);
   }
 });
