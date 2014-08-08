@@ -1,10 +1,10 @@
 <template name="userView">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">{{getName item._id}}</h3>
+      <h3 class="panel-title">{{getName user._id}}</h3>
     </div>
     <div class="panel-body">
-      {{#autoForm collection="Meteor.users" id="userForm" type="update" doc=item}}
+      {{#autoForm collection="Meteor.users" id="userForm" type="update" doc=user}}
       <!-- Name -->
       <div class="panel panel-default">
         <div class="panel-heading">
