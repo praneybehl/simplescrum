@@ -3,13 +3,37 @@
     <div class="list-group-item {{isActiveRoute 'usersNew'}}">
       <i class="fa fa-plus"></i> <a href="{{pathFor 'usersNew'}}">{{__ 'button.create'}} {{__ 'button.user'}}</a>
     </div>
-    {{#each items}}
-    <div class="list-group-item {{isActive _id}}">
-      <i class="fa fa-user"></i> <a href="{{pathFor 'usersView' _id=_id}}">{{getName _id}}</a><br />
-      <small>
-        <i class="fa fa-envelope"></i> {{getEmail _id}}
-      </small>
+  </div>
+  <!-- Tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#users" role="tab" data-toggle="tab">{{__ 'button.user'}}</a></li>
+    <li><a href="#teams" role="tab" data-toggle="tab">{{__ 'button.team'}}</a></li>
+  </ul>
+  <!-- Tab Panes -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="users">
+      <div class="list-group">
+        {{#each users}}
+        <div class="list-group-item {{isActive _id}}">
+          <i class="fa fa-user"></i> <a href="{{pathFor 'usersView' _id=_id}}">{{getName _id}}</a><br />
+          <small>
+            <i class="fa fa-envelope"></i> {{getEmail _id}}
+          </small>
+        </div>
+        {{/each}}
+      </div>
     </div>
-    {{/each}}
+    <div class="tab-pane" id="teams">
+      <div class="list-group">
+        {{#each teams}}
+        <div class="list-group-item {{isActive _id}}">
+          <i class="fa fa-user"></i> <a href="{{pathFor 'teamsView' _id=_id}}">{{getName _id}}</a><br />
+          <small>
+            <i class="fa fa-envelope"></i> {{getEmail _id}}
+          </small>
+        </div>
+        {{/each}}
+      </div>
+    </div>
   </div>
 </template>

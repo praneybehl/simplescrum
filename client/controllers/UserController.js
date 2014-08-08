@@ -7,16 +7,17 @@ UserController = RouteController.extend({
   },
   data: function() {
     return {
-      item: function() {
-        var _id = Router.current().params._id;
-
-        if (_id)
-          return Meteor.users.findOne({_id: _id});
-        else
-          return Meteor.user();
-      },
-      items: function() {
+      users: function() {
         return Meteor.users.find();
+      },
+      teams: function() {
+        return Teams.find();
+      },
+      user: function() {
+        return Meteor.users.findOne({_id: Router.current().params._id});
+      },
+      team: function() {
+        return Teams.findOne({_id: Router.current().params._id});
       }
     };
   }
