@@ -30,7 +30,7 @@
           <i class="fa fa-user"></i> <a href="{{pathFor 'teamsView' _id=_id}}">{{title}}</a><br />
           <small>
             <i class="fa fa-group"></i>
-            {{getRoles roles}}
+            {{getRoles _id}}
           </small>
         </div>
         {{/each}}
