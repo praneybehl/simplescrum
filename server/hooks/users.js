@@ -1,3 +1,10 @@
 Meteor.users.before.remove(function(userId, doc) {
-  // this is an example hook for loggin
+  // we want to remove the user from teams and stories
+  Teams.update({users: userId}, {$pull: {users: userId}}, function(error) {
+    if (error) console.log(error);
+  });
+
+  Stories.update({users: userId}, {$pull: {users: userId}}, function(error) {
+    if (error) console.log(error);
+  });
 });

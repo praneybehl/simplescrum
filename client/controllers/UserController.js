@@ -20,5 +20,10 @@ UserController = RouteController.extend({
         return Teams.findOne({_id: Router.current().params._id});
       }
     };
+  },
+  onAfterAction: function() {
+    // setup multiselect
+    $('select[name=roles]').multiselect('rebuild');
+    $('select[name=users]').multiselect('rebuild');
   }
 });
