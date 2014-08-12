@@ -1,7 +1,16 @@
-var assert = require('assert');
+var assert = require('assert'),
+    _ = require('underscore');
+
+var _user = {
+  email: 'test@email.com',
+  password: 'password',
+  profile: {
+    fname: 'John',
+    lname: 'Doe'
+  }
+};
 
 suite('Users', function() {
-  // test our UserSchema
   test('creating a user', function(done, server, client) {
     server.eval(function() {
       Meteor.users.find().observe({
@@ -16,15 +25,8 @@ suite('Users', function() {
       done();
     });
 
-    client.eval(function() {
-      Accounts.createUser({
-        email: 'test@email.com',
-        password: 'password',
-        profile: {
-          fname: 'John',
-          lname: 'Doe'
-        }
-      });
-    });
+    client.eval(function(doc) {
+      Accounts.createUser(doc);
+    }, _user);
   });
 });

@@ -1,14 +1,14 @@
 Accounts.onCreateUser(function(options, user) {
   // add profile if there
   user.profile = {
-    _audtis: [],
+    _audits: [],
     fname: 'First Name',
     lname: 'Last Name',
     address: {
       _audits: [],
       street1: '123 Default Street',
       city: 'Default',
-      state: 'NA',
+      state: 'CA',
       zip: 12345,
       created_by: 'SYSTEM',
       date_created: new Date()
@@ -44,9 +44,9 @@ Accounts.onCreateUser(function(options, user) {
   user = _.omit(user, ['_id', 'createdAt']);
 
   // test validate our user object
-  //UserSchema.namedContext().validate(user);
-  //console.log(UserSchema.namedContext().invalidKeys());
-  //console.log(user);
+  UserSchema.namedContext().validate(user);
+  console.log(UserSchema.namedContext().invalidKeys());
+  console.log(user);
 
   return user;
 });
