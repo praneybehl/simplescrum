@@ -4,13 +4,15 @@ LoginController = RouteController.extend({
     Session.set('layout', 1);
   },
   onAfterAction: function() {
-    // if login has been accomplished then go home
-    Meteor.setInterval(function() {
+    // our timeout function
+    var _fn = function() {
       if (Meteor.user && Meteor.user())
-        /**
-         * TODO: Need to route back to requested route.
-         */
-        Router.go('home'); // go home
-    }, 1000);
+        Router.go('home');
+      else
+        Meteor.setTimeout(_fn, 1000);
+    };
+
+    // start timeout
+    Meteor.setTimeout(_fn, 1000);
   }
 });
