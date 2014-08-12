@@ -52,22 +52,20 @@ Accounts.onCreateUser(function(options, user) {
 });
 
 Accounts.validateLoginAttempt(function(doc) {
-  //console.log(doc);
+  // TODO: Fail login attempt security stuff here.
   return true;
 });
 
 Accounts.onLogin(function(doc) {
-  //console.log("Success login");
-  //console.log(doc);
+  // TODO: Keep track of users logged in.
 });
 
 Accounts.onLoginFailure(function(doc) {
-  //console.log("Failure login");
-  //console.log(doc);
+  // TODO: Add some failed login attempt tracking
 });
 
 Meteor.users.before.update(function(userId, doc, fieldNames, modifier, options) {
-  console.log(modifier);
+  // do some actions now like create _audits
 });
 
 Meteor.users.before.remove(function(userId, doc) {
