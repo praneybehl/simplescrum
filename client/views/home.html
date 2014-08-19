@@ -94,7 +94,7 @@
                 <tbody>
                   {{#each recentUsers}}
                   <tr>
-                    <td><a href="{{pathFor 'usersView' _id=_id}}">{{getName _id}}</a></td>
+                    <td><a href="{{pathFor 'user-update' _id=_id}}">{{getName _id}}</a></td>
                     <td>{{fromNow date_created}}</td>
                   </tr>
                   {{else}}

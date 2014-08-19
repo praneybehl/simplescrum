@@ -1,8 +1,10 @@
-
+/**
+ * The global router configuration object for iron-router.
+ */
 Router.configure({
   layoutTemplate: '_layout', // our default layout template
   loadingTemplate: '_loading', // our loading template
-  notFoundTemplate: '404', // page not found
+  notFoundTemplate: '_404', // page not found
   loginRequired: {
     name: 'login',
     shouldRoute: true
@@ -20,7 +22,7 @@ Router.configure({
     ];
   },
   onBeforeAction: function() {
-    // this can be used for loading screens, etc...
+    Check(); // check for roles permission based on route
   },
   onAfterAction: function() {
     // this can be used for loading screens, etc...
@@ -55,6 +57,13 @@ Router.map(function() {
     controller: 'LoginController'
   });
 
+  // denied
+  // this route is for access denied
+  this.route('denied', {
+    path: '/denied',
+    template: '_403'
+  });
+
   // profile
   this.route('profile', {
     path: '/profile',
@@ -75,23 +84,23 @@ Router.map(function() {
     template: '_blank',
     controller: 'UserController'
   });
-  this.route('usersNew', {
+  this.route('user-create', {
     path: '/users/new',
     template: 'userNew',
     controller: 'UserController'
   });
-  this.route('usersView', {
+  this.route('user-update', {
     path: '/users/view/:_id',
     template: 'userView',
     controller: 'UserController'
   });
   // teams
-  this.route('teamsNew', {
+  this.route('team-create', {
     path: '/teams/new',
     template: 'teamNew',
     controller: 'UserController'
   });
-  this.route('teamsView', {
+  this.route('team-update', {
     path: '/teams/view/:_id',
     template: 'teamView',
     controller: 'UserController'
