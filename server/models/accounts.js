@@ -1,23 +1,41 @@
 _Accounts.allow({
   insert: function(userId, doc) {
-    return true;
+    if (userId && Roles.userIsInRole(userId, 'account-create-allow'))
+      return true;
+
+    return false;
   },
   update: function(userId, doc, fieldNames, modifier) {
-    return true;
+    if (userId && Roles.userIsInRole(userId, 'account-update-allow'))
+      return true;
+
+    return false;
   },
   remove: function(userId, doc) {
-    return true;
+    if (userId && Roles.userIsInRole(userId, 'account-delete-allow'))
+      return true;
+
+    return false;
   }
 });
 
 _Accounts.deny({
   insert: function(userId, doc) {
+    if (userId && Roles.userIsInRole(userId, 'account-create-deny'))
+      return true;
+
     return false;
   },
   update: function(userId, doc, fieldNames, modifier) {
+    if (userId && Roles.userIsInRole(userId, 'account-update-deny'))
+      return true;
+
     return false;
   },
   remove: function(userId, doc) {
+    if (userId && Roles.userIsInRole(userId, 'account-delete-deny'))
+      return true;
+
     return false;
   }
 });
