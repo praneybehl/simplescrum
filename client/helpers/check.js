@@ -1,4 +1,10 @@
-
+/**
+ * This if a global function that will redirect to denied route
+ * if the requesting user is not in that role.  Deny roles take
+ * priority over allow roles.
+ * TODO: Add team checking.
+ * @todo Add team checking.
+ */
 Check = function() {
   var _route = Router.current().route.name, // our current route name
       _userId = Meteor.userId(), // the current user _id
