@@ -24,8 +24,8 @@ UserController = RouteController.extend({
   onAfterAction: function() {
     Meteor.setTimeout(function() {
       // setup multiselect
-      $('select[name=roles]').multiselect('rebuild');
-      $('select[name=users]').multiselect('rebuild');
+      $('select[name=roles]').multiselect(Config.get('multiselect'));
+      $('select[name=users]').multiselect(Config.get('multiselect'));
     }, 500);
   }
 });
