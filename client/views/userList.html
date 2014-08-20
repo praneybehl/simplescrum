@@ -8,9 +8,14 @@
   <div class="tab-content">
     <div class="tab-pane active" id="users">
       <div class="list-group">
+        {{#if isInRole 'user-create-allow'}}
+        {{#if isInRole 'user-create-deny'}}
+        {{else}}
         <div class="list-group-item {{isActiveRoute 'user-create'}}">
           <i class="fa fa-plus"></i> <a href="{{pathFor 'user-create'}}">{{__ 'button.create'}} {{__ 'button.user'}}</a>
         </div>
+        {{/if}}
+        {{/if}}
         {{#each users}}
         <div class="list-group-item {{isActive _id}}">
           <div class="row">
@@ -35,9 +40,14 @@
     </div>
     <div class="tab-pane" id="teams">
       <div class="list-group">
+        {{#if isInRole 'team-create-allow'}}
+        {{#if isInRole 'team-create-deny'}}
+        {{else}}
         <div class="list-group-item {{isActiveRoute 'team-create'}}">
           <i class="fa fa-plus"></i> <a href="{{pathFor 'team-create'}}">{{__ 'button.create'}} {{__ 'button.team'}}</a>
         </div>
+        {{/if}}
+        {{/if}}
         {{#each teams}}
         <div class="list-group-item {{isActive _id}}">
           <a href="{{pathFor 'team-update' _id=_id}}">{{title}}</a><br />

@@ -6,6 +6,7 @@ Meteor.users.allow({
     return false;
   },
   update: function(userId, doc, fieldNames, modifier) {
+    console.log('allow: '+userId);
     if (userId && Roles.userIsInRole(userId, 'user-update-allow'))
       return true;
 
@@ -22,20 +23,20 @@ Meteor.users.allow({
 Meteor.users.deny({
   insert: function(userId, doc) {
     if (userId && Roles.userIsInRole(userId, 'user-create-deny'))
-      return false;
+      return true;
 
-    return true;
+    return false;
   },
   update: function(userId, doc, fieldNames, modifier) {
     if (userId && Roles.userIsInRole(userId, 'user-update-deny'))
-      return false;
+      return true;
 
-    return true;
+    return false;
   },
   remove: function(userId, doc) {
     if (userId && Roles.userIsInRole(userId, 'user-delete-deny'))
-      return false;
+      return true;
 
-    return true;
+    return false;
   }
 });

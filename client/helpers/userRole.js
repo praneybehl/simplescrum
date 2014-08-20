@@ -4,7 +4,7 @@ Template.userRole.rendered = function() {
   Meteor.setTimeout(function() {
     // setup our switch objects
     self.$('input[type=checkbox]').switchButton(Config.get('switchButton'));
-  }, 1000);
+  }, 500);
 };
 
 Template.userRole.helpers({
