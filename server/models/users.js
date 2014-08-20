@@ -6,7 +6,6 @@ Meteor.users.allow({
     return false;
   },
   update: function(userId, doc, fieldNames, modifier) {
-    console.log('allow: '+userId);
     if (userId && Roles.userIsInRole(userId, 'user-update-allow'))
       return true;
 
