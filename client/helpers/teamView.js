@@ -1,3 +1,12 @@
+Template.teamView.rendered = function() {
+  var self = this;
+
+  Meteor.setTimeout(function() {
+    // resize multiselect dropdowns
+    self.$('.multiselect-container').width('100%');
+  }, 1000);
+};
+
 Template.teamView.helpers({
   users: function() {
     return _.map(Meteor.users.find().fetch(), function(user) {
