@@ -88,6 +88,7 @@ html, body {
   background-color: #e0e0e0;
 }
 /*#col4 .panel:first-child { margin: 10px; }*/
+#col4 .form-group div.checkbox { margin: 0; padding: 0; }
 
 /*** Components ***/
 
@@ -131,3 +132,9 @@ html, body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+/* Font */
+.bold,
+.bold label { font-weight: bold; }
+.italic,
+.italic label { font-style: italic; }

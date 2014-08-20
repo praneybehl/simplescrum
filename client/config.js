@@ -20,11 +20,33 @@ Config = {
     disableIfEmpty: true // disabled if no options
   },
   /**
+   * The switchButton settings information.
+   * @type {Object}
+   */
+  switchButton: {
+    checked: undefined, // switch state
+    show_labels: false, // show on/off
+    labels_placement: 'right', // label position: both, left, right
+    on_label: __('button.on') || 'On', // on label
+    off_label: __('button.off') || 'Off', // off label
+    //width: 18, // btn width pixels
+    height: 17, // btn height pixes
+    //button_width: 9, // width of sliding part
+    clear: false, // insert 'div style=clear: both' after
+    //clear_after: null, // override clearing element
+    on_callback: function() { // fired when switched to on
+      $(this.element).attr('checked', true); // check checkbox
+    },
+    off_callback: function() { // fired when switched to off
+      $(this.element).attr('checked', false); // uncheck checkbox
+    }
+  },
+  /**
    * Will return the options attached to this Config object.
    * @param  {string} key The key for the options to return.
    * @return {object|string|number|boolean}     The returned configuration(s).
    */
   get: function(key) {
-    return this[key];
+    return this[key] || {};
   }
 };

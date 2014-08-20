@@ -13,7 +13,19 @@
         </div>
         {{#each users}}
         <div class="list-group-item {{isActive _id}}">
-          <i class="fa fa-user"></i> <a href="{{pathFor 'user-update' _id=_id}}">{{getName _id}}</a><br />
+          <div class="row">
+            <div class="col-sm-10">
+              <i class="fa fa-user"></i> <a href="{{pathFor 'user-update' _id=_id}}">{{getName _id}}</a>
+            </div>
+            <div class="col-sm-2">
+              {{#if isInRole 'user-role-allow'}}
+              {{#if isInRole 'user-role-deny'}}
+              {{else}}
+              <a href="{{pathFor 'user-role'}}" title="{{__ 'user.roles'}}"><i class="fa fa-lock"></i></a>
+              {{/if}}
+              {{/if}}
+            </div>
+          </div>
           <small>
             <i class="fa fa-envelope"></i> {{getEmail _id}}
           </small>

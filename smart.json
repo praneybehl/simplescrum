@@ -9,13 +9,14 @@
     "font-awesome": {},
     "fullcalendar": {},
     "just-i18n": {},
-    "iron-router": {},
-    "iron-router-active": {},
-    "iron-router-auth": {},
-    "jquery-ui": {},
     "roles": {},
     "toastr": {},
-    "x-editable-bootstrap3": {},
-    "accounts-ui-bootstrap-3": {}
+    "accounts-ui-bootstrap-3": {},
+    "jqueryui": {},
+    "iron-router": {
+      "version": "0.8.2"
+    },
+    "iron-router-auth": {},
+    "iron-router-active": {}
   }
 }

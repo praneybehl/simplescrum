@@ -11,14 +11,15 @@
       "font-awesome": {},
       "fullcalendar": {},
       "just-i18n": {},
-      "iron-router": {},
-      "iron-router-active": {},
-      "iron-router-auth": {},
-      "jquery-ui": {},
       "roles": {},
       "toastr": {},
-      "x-editable-bootstrap3": {},
-      "accounts-ui-bootstrap-3": {}
+      "accounts-ui-bootstrap-3": {},
+      "jqueryui": {},
+      "iron-router": {
+        "version": "0.8.2"
+      },
+      "iron-router-auth": {},
+      "iron-router-active": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -28,18 +29,18 @@
       },
       "autoform": {
         "git": "https://github.com/aldeed/meteor-autoform.git",
-        "tag": "v0.16.1",
-        "commit": "34a447fd3a1b3164c78f865aabbac3ddc2d033fb"
+        "tag": "v0.17.0",
+        "commit": "c6e49dc0563a827eede2861745d7e42ee094f044"
       },
       "collection2": {
         "git": "https://github.com/aldeed/meteor-collection2.git",
-        "tag": "v0.4.5",
-        "commit": "336903730249197b3358dac31b1bd5ed64fecc50"
+        "tag": "v0.4.6",
+        "commit": "80554182486be0d8e74f7ed02194a5649d712e27"
       },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
-        "tag": "v0.6.0",
-        "commit": "418ec496612fb2afc853e342f0d2269b6674a2fe"
+        "tag": "v0.7.0",
+        "commit": "77d267aec4ba8a70f677e5d9ef9fb91fb0e3f0f6"
       },
       "bootstrap3-datetimepicker": {
         "git": "https://github.com/tsega/meteor-bootstrap3-datetimepicker.git",
@@ -66,50 +67,55 @@
         "tag": "v0.3.0",
         "commit": "a60e7f4350fb9648d6f6b4a01acbbc114c4f4343"
       },
-      "iron-router": {
-        "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.8.2",
-        "commit": "05415a8891ea87a00fb1e2388585f2ca5a38e0da"
-      },
-      "iron-router-active": {
-        "git": "https://github.com/XpressiveCode/iron-router-active.git",
-        "tag": "v0.2.0",
-        "commit": "1b05aad5325c3dfdb5186b9c288aa53013d767b8"
-      },
-      "iron-router-auth": {
-        "git": "https://github.com/XpressiveCode/iron-router-auth.git",
-        "tag": "v0.2.1",
-        "commit": "39b5d70326536641bc50a184d195aa3ac49ff4a5"
-      },
-      "jquery-ui": {
-        "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
-        "tag": "v1.9.2",
-        "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
-      },
       "roles": {
         "git": "https://github.com/alanning/meteor-roles.git",
-        "tag": "v1.2.10",
-        "commit": "7ccb35de0a6cb0c9a0c3666badd04757e39c09a6"
+        "tag": "v1.2.11",
+        "commit": "2d7dc91848ec874d3a0852c77f462d0fae749de5"
       },
       "toastr": {
         "git": "https://github.com/chrismbeckett/meteor-toastr.git",
         "tag": "v0.1.0",
         "commit": "476ed73ebbdb09e69ee22034e52d35b777602ec5"
       },
-      "x-editable-bootstrap3": {
-        "git": "https://github.com/JustinSGray/meteor-x-editable-bootstrap.git",
-        "tag": "v1.5.2",
-        "commit": "1e5e6d7bddf0b17cc6ea2fc1f50c3f9fd2cfc3f3"
-      },
       "accounts-ui-bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
-        "tag": "v0.3.3",
-        "commit": "2e50b605d8d5ed68e48c4529a65f13552d8af3f9"
+        "tag": "v0.3.5",
+        "commit": "bbd0a8a46ae02526c2ebfee05fa8075d8d04a9ba"
+      },
+      "jqueryui": {
+        "git": "https://github.com/mizzao/meteor-jqueryui.git",
+        "tag": "v1.11.0",
+        "commit": "06194edc0bdbb28c34b3a656bf9cb6a32718b44e"
+      },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.8.2",
+        "commit": "05415a8891ea87a00fb1e2388585f2ca5a38e0da"
+      },
+      "iron-router-auth": {
+        "git": "https://github.com/XpressiveCode/iron-router-auth.git",
+        "tag": "v0.2.1",
+        "commit": "39b5d70326536641bc50a184d195aa3ac49ff4a5"
+      },
+      "iron-router-active": {
+        "git": "https://github.com/XpressiveCode/iron-router-active.git",
+        "tag": "v0.2.0",
+        "commit": "1b05aad5325c3dfdb5186b9c288aa53013d767b8"
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",
-        "tag": "v2.6.0",
-        "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
+        "tag": "v2.8.1",
+        "commit": "722ea63783d594341023836b7d418ab2567dab8c"
+      },
+      "jquery-ui": {
+        "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
+        "tag": "v1.9.2",
+        "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
+      },
+      "build-fetcher": {
+        "git": "https://github.com/mizzao/meteor-build-fetcher.git",
+        "tag": "v0.2.0",
+        "commit": "5202ca83277860d798c6ff2ef1d8fe1bce007d0f"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

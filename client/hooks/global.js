@@ -8,7 +8,7 @@ AutoForm.addHooks(null, {
    * @return {void}           Nothing
    */
   onSuccess: function(operation, result, template) {
-    Alert.s('You have saved the item successfully!', ucfirst(operation), 'OK');
+    Alert.s(__('message.item_saved'), ucfirst(operation), 'OK');
   },
   /**
    * This function will display an error message.

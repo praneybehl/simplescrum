@@ -94,6 +94,12 @@ Router.map(function() {
     template: 'userView',
     controller: 'UserController'
   });
+  this.route('user-role', {
+    path: '/users/role/:_id',
+    template: 'userRole',
+    controller: 'UserController'
+  });
+
   // teams
   this.route('team-create', {
     path: '/teams/new',
