@@ -22,20 +22,20 @@ _Accounts.allow({
 _Accounts.deny({
   insert: function(userId, doc) {
     if (userId && Roles.userIsInRole(userId, 'account-create-deny'))
-      return false;
+      return true;
 
-    return true;
+    return false;
   },
   update: function(userId, doc, fieldNames, modifier) {
     if (userId && Roles.userIsInRole(userId, 'account-update-deny'))
-      return false;
+      return true;
 
-    return true;
+    return false;
   },
   remove: function(userId, doc) {
     if (userId && Roles.userIsInRole(userId, 'account-delete-deny'))
-      return false;
+      return true;
 
-    return true;
+    return false;
   }
 });
