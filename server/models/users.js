@@ -6,6 +6,10 @@ Meteor.users.allow({
     return false;
   },
   update: function(userId, doc, fieldNames, modifier) {
+    // the user is editing profile so allow
+    if (userId && userId === doc._id)
+      return true;
+
     if (userId && Roles.userIsInRole(userId, 'user-update-allow'))
       return true;
 
