@@ -24,6 +24,8 @@ getValue = function(doc, key) {
  * @return {object}            The modified modifier object.
  */
 getAudits = function(userId, doc, fieldNames, modifier) {
+  if (!userId) return; // skip if not logged in
+
   // validate object types
   check(userId, String);
   check(doc, Object);

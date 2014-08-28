@@ -47,6 +47,7 @@ Accounts.onCreateUser(function(options, user) {
   user = _.extend(user, {
     _audits: [],
     _account: options._account || 'SYSTEM',
+    roles: [],
     created_by: options.created_by || 'SYSTEM',
     date_created: new Date()
   });
