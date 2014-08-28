@@ -24,3 +24,11 @@ Check = function() {
   if (!_allow)
     Router.go('denied');
 };
+
+/**
+ * Every second we want to check if the user is logged in or not.
+ */
+Meteor.setInterval(function() {
+  if (Router.current().route.name !== 'login' && !Meteor.user())
+    Router.go('login');
+}, 5000);

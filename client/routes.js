@@ -5,10 +5,10 @@ Router.configure({
   layoutTemplate: '_layout', // our default layout template
   loadingTemplate: '_loading', // our loading template
   notFoundTemplate: '_404', // page not found
-  loginRequired: {
+  /*loginRequired: {
     name: 'login',
     shouldRoute: true
-  },
+  },*/
   waitOn: function() {
     // this is where i like to load default subscriptions like
     // to a settings collection.
