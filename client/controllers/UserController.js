@@ -30,7 +30,7 @@ UserController = RouteController.extend({
 
       // setup our switch objects
       if (Session.get('flagRun')) { // run once hack
-        $('input[type=checkbox]').switchButton(Config.get('switchButton'));
+        $('#userRole input[type=checkbox]').switchButton(Config.get('switchButton'));
         Session.set('flagRun', false);
       }
     }, 500);
