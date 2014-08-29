@@ -3,17 +3,27 @@
     <li class="list-group-item {{isActiveRoute 'home'}} home">
       <a href="{{pathFor 'home'}}"><i class="fa fa-home fa-4x"></i></a>
     </li>
+    {{#if isInRole 'user-view-allow'}}
+    {{#if isInRole 'user-view-deny'}}
+    {{else}}
     <li class="list-group-item {{isActivePath 'users'}}{{isActivePath 'teams'}}">
       <a href="{{pathFor 'users'}}"><i class="fa fa-users fa-4x"></i></a>
     </li>
+    {{/if}}
+    {{/if}}
     <li class="list-group-item {{isActivePath 'projects'}}{{isActivePath 'sprints'}}">
       <a href="{{pathFor 'projects'}}"><i class="fa fa-code fa-4x"></i></a>
     </li>
     <li class="list-group-item {{isActivePath 'stories'}}">
       <a href="{{pathFor 'stories'}}"><i class="fa fa-check fa-4x"></i></a>
     </li>
+    {{#if isInRole 'setting-view-allow'}}
+    {{#if isInRole 'setting-view-deny'}}
+    {{else}}
     <li class="list-group-item {{isActivePath 'settings'}}">
       <a href="{{pathFor 'settings'}}"><i class="fa fa-gears fa-4x"></i></a>
     </li>
+    {{/if}}
+    {{/if}}
   </ul>
 </template>
