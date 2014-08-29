@@ -5,7 +5,7 @@ Template.projectView.events({
 
     Delete(function(no) {
       if (!no) {
-        Projects.remove({_id: Router.current().params._id}, function(error) {
+        Projects.remove({_id: Router.current().params._project}, function(error) {
           if (error)
             Alert.e(error);
           else
