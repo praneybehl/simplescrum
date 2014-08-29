@@ -15,27 +15,42 @@ resizeLayout = function() {
   // set our wrapper to cover the entire screen minus the top bar
   _wrapper.height(_body.height() - _menuTop.height());
 
+  // hide all
+      _col1.hide();
+      _col2.hide();
+      _col3.hide();
+      _col4.hide();
+
   // reisze our col4 for now
   var w = _wrapper.width();
 
   switch(_cols) {
     case 1:
-      _col4.width(w).css({left: 0});
+      _col1.hide();
+      _col2.hide();
+      _col3.hide();
+      _col4.show().width(w).css({left: 0});
       break;
     case 2:
       w -= _col1.width();
-      _col4.width(w).css({left: _col1.width()});
+      _col1.show();
+      _col2.hide();
+      _col3.hide();
+      _col4.show().width(w).css({left: _col1.width()});
       break;
     case 3:
       w -= _col1.width() + _col2.width();
-      _col2.css({left: _col1.width()});
-      _col4.width(w).css({left: Math.abs(_wrapper.width() - w)});
+      _col1.show();
+      _col2.hide();
+      _col2.show().css({left: _col1.width()});
+      _col4.show().width(w).css({left: Math.abs(_wrapper.width() - w)});
       break;
     case 4:
       w -= _col1.width() + _col2.width() + _col3.width();
-      _col2.css({left: _col1.width()});
-      _col3.css({left: (_col1.width() + _col2.width())});
-      _col4.width(w).css({left: Math.abs(_wrapper.width() - w)});
+      _col1.show();
+      _col2.show().css({left: _col1.width()});
+      _col3.show().css({left: (_col1.width() + _col2.width())});
+      _col4.show().width(w).css({left: Math.abs(_wrapper.width() - w)});
       break;
   }
 

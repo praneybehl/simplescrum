@@ -56,7 +56,7 @@ AutoForm.hooks({
      * @return {void}           Nothing
      */
     onSuccess: function(operation, result, template) {
-      Router.go('usersView', {_id: result});
+      Router.go('user-update', {_id: result});
     }
   }
 });

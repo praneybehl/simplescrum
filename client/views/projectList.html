@@ -1,0 +1,21 @@
+<template name="projectList">
+  <ul class="list-group">
+    {{#if isInRole 'project-create-allow'}}
+    {{#if isInRole 'project-create-deny'}}
+    {{else}}
+    <div class="list-group-item {{isActiveRoute 'project-create'}}">
+      <i class="fa fa-plus"></i> <a href="{{pathFor 'project-create'}}">{{__ 'button.create'}} {{__ 'button.project'}}</a>
+    </div>
+    {{/if}}
+    {{/if}}
+    {{#each projects}}
+    <li class="list-group-item  {{isActive _id}}">
+      <a href="{{pathFor 'project-update' _project=_id}}">{{title}}</a>
+    </li>
+    {{else}}
+    <li class="list-group-item">
+      {{__ 'error.empty'}}
+    </li>
+    {{/each}}
+  </ul>
+</template>

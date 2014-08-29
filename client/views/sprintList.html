@@ -1,0 +1,21 @@
+<template name="sprintList">
+  <ul class="list-group">
+    {{#if isInRole 'sprint-create-allow'}}
+    {{#if isInRole 'sprint-create-deny'}}
+    {{else}}
+    <li class="list-group-item {{isActiveRoute 'sprint-create'}}">
+      <i class="fa fa-plus"></i> <a href="{{pathFor 'sprint-create' _project=_project}}">{{__ 'button.create'}} {{__ 'button.sprint'}}</a>
+    </li>
+    {{/if}}
+    {{/if}}
+    {{#each sprints}}
+    <li class="list-group-item  {{isActive _id}}">
+      <a href="{{pathFor 'sprint-update' _project=_project _sprint=_id}}">{{title}}</a>
+    </li>
+    {{else}}
+    <li class="list-group-item">
+      {{__ 'error.empty'}}
+    </li>
+    {{/each}}
+  </ul>
+</template>

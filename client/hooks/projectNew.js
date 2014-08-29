@@ -1,5 +1,5 @@
 AutoForm.hooks({
-  teamNew: {
+  projectNew: {
     before: {
       insert: function(doc, template) {
         return doc;
@@ -14,6 +14,9 @@ AutoForm.hooks({
       // setup account
       doc._account = Meteor.user()._account;
 
+      // setup date
+      doc.date_due = moment(doc.date_due).toDate();
+
       return doc;
     },
     /**
@@ -25,7 +28,7 @@ AutoForm.hooks({
      * @return {void}           Nothing
      */
     onSuccess: function(operation, result, template) {
-      Router.go('team-update', {_id: result});
+      Router.go('project-update', {_id: result});
     }
   }
 });

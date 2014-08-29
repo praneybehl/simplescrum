@@ -1,0 +1,10 @@
+<template name="projectNew">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{__ 'button.create'}}</h3>
+    </div>
+    <div class="panel-body">
+      {{> quickForm collection="Projects" id="projectNew" type="insert" omitFields='_account,_audits,created_by,date_created,modified_by,date_modified'}}
+    </div>
+  </div>
+</template>

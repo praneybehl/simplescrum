@@ -23,6 +23,7 @@ Router.configure({
   },
   onBeforeAction: function() {
     Check(); // check for roles permission based on route
+    Current.setup(); // setup our currently accessed information
   },
   onAfterAction: function() {
     // this can be used for loading screens, etc...
@@ -115,15 +116,35 @@ Router.map(function() {
   // projects
   this.route('projects', {
     path: '/projects',
-    template: 'testMain',
-    controller: 'TestController'
+    template: '_blank',
+    controller: 'ProjectController'
+  });
+  this.route('project-create', {
+    path: '/projects/new',
+    template: 'projectNew',
+    controller: 'ProjectController'
+  });
+  this.route('project-update', {
+    path: '/projects/view/:_project',
+    template: 'projectView',
+    controller: 'ProjectController'
   });
 
-  // milestones
-  this.route('milestones', {
-    path: '/milestones',
-    template: 'testMain',
-    controller: 'TestController'
+  // sprints
+  this.route('sprints', {
+    path: '/sprints',
+    template: '_blank',
+    controller: 'ProjectController'
+  });
+  this.route('sprint-create', {
+    path: '/sprints/new/:_project',
+    template: 'sprintNew',
+    controller: 'ProjectController'
+  });
+  this.route('sprint-update', {
+    path: '/sprints/view/:_project/:_sprint',
+    template: 'sprintView',
+    controller: 'ProjectController'
   });
 
   // stories

@@ -192,3 +192,32 @@ Meteor.publish('teams', function(_query, _options) {
     return Teams.find(_query, _options);
   }
 });
+
+/**
+ * This function will take a query and options value and
+ * return a mongodb cursor object.
+ * @param  {object} _query   The query object.
+ * @param  {object} _options The query options.
+ * @return {object}          The mongodb cursor object.
+ */
+Meteor.publish('settings', function(_query, _options) {
+  if (this.userId) {
+    // get our user account id
+    var _account = getUserAccountID(this.userId);
+
+    // combine defaults with new
+    _query = _.extend({_account: _account}, _query);
+    _options = _.extend({limit: 1000, sort: {title: 1}}, _options);
+
+    // check the account for current user unless super-admin
+    if (_query._account
+      && _query._account !== _account
+      && Roles.userIsInRole(this.userId, 'super-admin')) {
+      // the user is not a super-admin so set back
+      _query._account = _account;
+    }
+
+    // return our cursor object
+    return Settings.find(_query, _options);
+  }
+});

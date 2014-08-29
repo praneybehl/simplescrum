@@ -1,5 +1,5 @@
 AutoForm.hooks({
-  teamNew: {
+  sprintNew: {
     before: {
       insert: function(doc, template) {
         return doc;
@@ -14,6 +14,13 @@ AutoForm.hooks({
       // setup account
       doc._account = Meteor.user()._account;
 
+      // setup project
+      doc._project = Current.project();
+
+      // setup dates
+      doc.date_start = moment(doc.date_start).toDate();
+      doc.date_end = moment(doc.date_end).toDate();
+
       return doc;
     },
     /**
@@ -25,7 +32,7 @@ AutoForm.hooks({
      * @return {void}           Nothing
      */
     onSuccess: function(operation, result, template) {
-      Router.go('team-update', {_id: result});
+      Router.go('sprint-update', {_id: result, _project: Current.project()});
     }
   }
 });
