@@ -32,7 +32,7 @@ AutoForm.hooks({
      * @return {void}           Nothing
      */
     onSuccess: function(operation, result, template) {
-      Router.go('sprint-update', {_id: result, _project: Current.project()});
+      Router.go('sprint-update', {_sprint: result, _project: Current.project()});
     }
   }
 });

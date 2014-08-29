@@ -28,7 +28,7 @@ AutoForm.hooks({
      * @return {void}           Nothing
      */
     onSuccess: function(operation, result, template) {
-      Router.go('project-update', {_id: result});
+      Router.go('project-update', {_project: result});
     }
   }
 });
