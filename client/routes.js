@@ -150,7 +150,7 @@ Router.map(function() {
   // stories
   this.route('stories', {
     path: '/stories',
-    template: 'testMain',
-    controller: 'TestController'
+    template: 'storyView',
+    controller: 'StoryController'
   });
 });

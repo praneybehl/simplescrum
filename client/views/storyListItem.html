@@ -1,0 +1,51 @@
+<template name="storyListItem">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-sm-6">
+          <h3 class="panel-title">{{title}} <small>{{fromNow date_created}}</small></h3>
+        </div>
+        <div class="col-sm-6 text-right">
+        <div class="btn-group btn-group-xs">
+          <button type="button" class="btn btn-default storyEdit">
+            <i class="fa fa-edit"></i>
+          </button>
+        </div>
+        </div>
+      </div>
+    </div>
+    {{#if summary}}
+    {{else}}
+    <div class="panel-body">
+      <table class="table table-hover table-striped">
+        <tbody>
+          <tr>
+            <td>{{__ 'story.type'}}</td>
+            <td>{{{type}}}</td>
+          </tr>
+          <tr>
+            <td>{{__ 'story.status'}}</td>
+            <td>{{{status}}}</td>
+          </tr>
+          <tr>
+            <td>{{__ 'story.priority'}}</td>
+            <td>{{{priority}}}</td>
+          </tr>
+          <tr>
+            <td>{{__ 'story.teams'}}</td>
+            <td>{{{teams}}}</td>
+          </tr>
+          <tr>
+            <td>{{__ 'story.users'}}</td>
+            <td>{{{users}}}</td>
+          </tr>
+          <tr>
+            <td>{{__ 'story.body'}}</td>
+            <td>{{{body}}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    {{/if}}
+  </div>
+</template>

@@ -1,0 +1,91 @@
+<template name="storyView">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{__ 'stories'}}</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        {{#autoForm collection="Stories" id="storyView" type=type doc=doc}}
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-sm-12">
+              {{> afQuickField id="_project" name="_project" options=projects}}
+            </div>
+            <div class="col-sm-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h3 class="panel-title">{{__ 'stories'}}</h3>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                      {{#if summary}}
+                      <button type="button" class="btn btn-default btn-xs storyDetail">
+                        <i class="fa fa-expand"></i>
+                      </button>
+                      {{else}}
+                      <button type="button" class="btn btn-default btn-xs storySummary">
+                        <i class="fa fa-compress"></i>
+                      </button>
+                      {{/if}}
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  {{#each stories}}
+                  {{> storyListItem}}
+                  {{else}}
+                  <div class="text-center">
+                    <span class="label label-info">{{__ 'error.empty'}}</span>
+                  </div>
+                  {{/each}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-sm-3">
+              {{> afQuickField id="type" name="type" options=types}}
+            </div>
+            <div class="col-sm-3">
+              {{> afQuickField id="status" name="status" options=statuses}}
+            </div>
+            <div class="col-sm-3">
+              {{> afQuickField id="priority" name="priority" options=priorities value="Normal"}}
+            </div>
+            <div class="col-sm-3">
+              {{> afQuickField id="points" name="points" value="1"}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              {{> afQuickField id="teams" name="teams" options=teams}}
+            </div>
+            <div class="col-sm-6">
+              {{> afQuickField id="users" name="users" options=users}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              {{> afQuickField id="title" name="title"}}
+            </div>
+            <div class="col-sm-12">
+              {{> afQuickField id="body" name="body" rows="4"}}
+            </div>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-success">
+              <i class="fa fa-save"></i> {{#if doc}}{{__ 'button.update'}}{{else}}{{__ 'button.create'}}{{/if}} {{__ 'button.story'}}
+            </button>
+            <button type="button" class="btn btn-warning">
+              <i class="fa fa-refresh"></i> {{__ 'button.reset'}}
+            </button>
+          </div>
+        </div>
+        {{/autoForm}}
+      </div>
+    </div>
+  </div>
+</template>
