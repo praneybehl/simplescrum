@@ -46,7 +46,7 @@ html, body {
 #col1 .list-group { width: 100%; }
 #col1 .list-group-item { border: 0; }
 #col1 .active {
-  background-color: #fff;
+  background-color: #fafafa;
   border-top: 1px solid #428bca;
   border-bottom: 1px solid #428bca;
   border-left: 1px solid #428bca;
@@ -94,14 +94,14 @@ html, body {
 
 /* _blank */
 #blank {
-    display: table;
-    width: 100%;
-    height: 100%;
+  display: table;
+  width: 100%;
+  height: 100%;
 }
 #blank div {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
 #blank div i { opacity: 0.75; }
 
@@ -119,6 +119,16 @@ html, body {
 
 /* Fixes */
 .panel-heading { border-radius: 0; }
+.tab-content {
+  padding: 10px;
+
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
 
 /* Margins */
 .mar-10 { margin: 10px; }

@@ -74,8 +74,8 @@ Router.map(function() {
   // settings
   this.route('settings', {
     path: '/settings',
-    template: 'testMain',
-    controller: 'TestController'
+    template: 'settingView',
+    controller: 'SettingController'
   });
 
   // users

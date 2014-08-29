@@ -1,0 +1,27 @@
+<template name="settingView">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{__ 'settings'}}</h3>
+    </div>
+    <div class="panel-body">
+      <ul class="nav nav-tabs" data-role="tablist">
+        <li class="active">
+          <a href="#general" data-role="tab" data-toggle="tab">
+            <i class="fa fa-cog"></i>{{__ 'setting.tab.general'}}
+          </a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="general">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="alert alert-info">
+                <strong>{{__ 'development.title'}}</strong> {{__ 'development.message'}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
